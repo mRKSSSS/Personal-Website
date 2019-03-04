@@ -1,0 +1,72 @@
+.portfolio{
+    width: 100%;
+    height: auto;
+    background: $light-color1;
+    box-shadow: 0px -1px 4px black;
+    padding-bottom: 50px;
+    @include mq(0px, 500px){
+        padding-bottom: 90px;
+    }
+    h1{
+        font-family: $title-font;
+        color: $title-color;
+        font-size: 45px;
+        text-align: center;
+        padding: 50px;
+    }
+    .slideshow-container{
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        .mySlides{
+            margin: 0 15px;
+            display: none;
+            position: relative; 
+            /* Project Slides Fade Animaton */
+            animation: fade .8s;
+            @keyframes fade{
+                0%{
+                    opacity: 0.5;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+            img{
+                width: 100%;
+            }
+            .caption{
+                padding: 15px;
+                position: absolute;
+                bottom: 3px;
+                width: 100%;
+                text-align: center;
+                font-family: $text-font;
+                font-size: 15px;
+                color: #FFF;
+                background: rgba(0, 0, 0, 0.6);
+                @include mq(0px, 500px){
+                    bottom: -40px;
+                    font-size: 13px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $title-color;
+                }
+            }
+        }
+        .prevButton, .nextButton{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 30px;
+            color: $title-color;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .nextButton{
+            right: 0;
+        }
+    }
+}

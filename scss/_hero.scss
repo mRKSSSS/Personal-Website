@@ -1,0 +1,51 @@
+.hero{
+    background-image: url('../images/heroimg3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    .introText{
+        font-family: $title-font;
+        font-size: 35px;
+        text-align: right;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 5%;
+        .highlightWord{
+            font-size: 45px;
+            color: $title-color;
+            @include mq(0px, 500px){
+                font-size: 40px;
+            }
+        }
+        @include mq(0px, 500px){
+            font-size: 30px;
+            h1{
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .scrollDown{
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+        transform: translateX(-50%);
+        // Scroll Down Animation
+        animation: move 2s infinite;
+        @keyframes move{
+            0%{
+                bottom: 5%;
+            }
+            50%{
+                bottom: 3%;
+            }
+            100%{
+                bottom: 5%;
+            }
+        }
+        img{
+            width: 50px;
+        }
+    } 
+}

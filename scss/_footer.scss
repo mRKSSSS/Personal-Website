@@ -1,0 +1,65 @@
+footer{
+    width: 100%;
+    height: auto;
+    background-color: $light-color2;
+    box-shadow: 0px -1px 4px black;
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
+        text-align: center;
+        h1{
+            font-family: $title-font;
+            color: $title-color;
+            font-size: 35px;
+            padding: 10px;
+        }
+        .social-media{
+            height: auto;
+            margin-top: 5px;
+            .mail a{
+                text-decoration: none;
+                .icon-mail{
+                    font-size: 57px;
+                    color: $dark-color;
+                    transition: all .4s ease;
+                    &:hover{
+                        color: $title-color;
+                    }
+                }
+            }
+            .linkedin, .github, .fcc, .codepen{
+                background-color: $dark-color;
+                width: 35px;
+                height: 35px;
+                display: inline-block;
+                border-radius: 50%;
+                margin: 15px 4px;
+                position: relative;
+                transition: all .4s ease;
+                &:hover{
+                    background-color: $title-color;
+                }
+                a{
+                    text-decoration: none;
+                    i{
+                        font-size: 16px;
+                        color: $light-color2;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+        p{
+            font-family: $text-font;
+            color: #273744;
+            text-align: center;
+            padding: 4px;
+            font-size: 12px;
+            font-style: italic;
+        }
+    }
+}

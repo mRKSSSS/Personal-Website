@@ -1,0 +1,33 @@
+/* Font Families */
+
+$title-font: 'Montserrat', sans-serif;
+$text-font: 'Lato', sans-serif;
+
+/* Colors */
+$title-color: #1A82BA;
+$dark-color: #273744;
+$medium-color: #92886E;
+$light-color1: #C0BEAD;
+$light-color2: #81B7BE;
+
+
+/* General */
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* Mixins */
+@mixin mq($min, $max){
+	@media screen and(min-width: $min) and (max-width: $max){
+		@content;
+	}
+}

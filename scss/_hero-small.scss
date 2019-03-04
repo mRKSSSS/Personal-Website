@@ -1,0 +1,20 @@
+.hero-small{
+    background-image: url('../images/about-background.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 140px;
+    height: 36%;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    .introText{
+        position: absolute;
+        bottom: 5%;
+        right: 15%;
+        h1{
+            font-family: $title-font;
+            font-size: 45px;
+            color: #FFF;
+        }
+    }
+}

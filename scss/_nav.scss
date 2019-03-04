@@ -1,0 +1,58 @@
+header{
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    nav{
+        ul{
+            li{
+                display: inline-block;
+                margin: 20px 30px;            
+                position: relative;
+                @include mq(0px, 350px){
+                 margin: 20px;           
+                }
+                a{
+                    text-decoration: none;
+                    font-family: $text-font;
+                    color: $title-color;
+                    font-size: 15px;
+                    &.mobile-only{
+                        display: none;
+                        font-size: 20px;
+                        @include mq(0px, 500px){
+                            display: inline-block;
+                        }
+                    }
+                    &.desktop-only{
+                        @include mq(0px, 500px){
+                            display: none;
+                        }
+                    }
+                }
+                /* Menu Hover Animation */
+                a::before, a::after{
+                    position: absolute;
+                    content: '';
+                    opacity: 0;
+                    background: $title-color;
+                    width: 0%;
+                    height: 2px;
+                    transition: all 0.8s;
+                    bottom: -20px;
+                }
+                a::before{
+                    left: -25px;
+                }
+                a::after{
+                    right: -25px;
+                }
+                a:hover::before, a:hover::after{
+                    width: 58px;
+                    opacity: 1;
+                }
+            }    
+        }
+    }
+}
